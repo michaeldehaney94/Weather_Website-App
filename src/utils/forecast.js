@@ -2,7 +2,7 @@ const request = require('request')
 
 //reverse geocoding to find weather forcast
 const forecast = (latitude, longitude, callback) => {
-    const url = 'http://api.weatherstack.com/current?access_key=9263f8b0e6969b5b51e6002c8f8566bc&query=' +  decodeURIComponent(latitude) + ',' +  decodeURIComponent(longitude) + '&units=f'
+    const url = 'http://api.weatherstack.com/current?access_key=9263f8b0e6969b5b51e6002c8f8566bc&query=' + latitude + ',' + longitude + '&units=f'
 
     request({ url, json:true}, (error, {body}) =>{
         if (error) {

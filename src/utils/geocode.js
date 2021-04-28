@@ -4,8 +4,8 @@ const request = require('request')
 //callback will hold the longitude and latitude of location
 const geocode = (address, callback) => {
     
-    //address needs to be wrapped in encodeURIComponent() to decode it in URL search
-   const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoibWlja'+
+    //address needs to be wrapped in decodeURIComponent() to decode it in URL search
+   const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + decodeURIComponent(address) + '.json?access_token=pk.eyJ1IjoibWlja'+
    'GFlbC1kZWhhbmV5IiwiYSI6ImNrbnN6ZzM3NTI5OWYybnB1Y3pwb3ZoMjMifQ.cg3SozoAoBIKv8x65V5jAw&limit=1'
 
     request({url, json:true}, (error, {body}) => {

@@ -6,6 +6,8 @@ const forecast = require('./utils/forecast.js')//import forecast
 
 const app = express() 
 
+//port number used to connect to heroku server
+const port = process.env.PORT || 3000 //default port
 
 //static file location path
 const directoryPath = path.join(__dirname, '../public')
@@ -94,7 +96,6 @@ app.get('*', (req, res) => {
     });
 });
 
-//default port no# 3000 to send/receive data
-app.listen(3000, () => {
-    console.log('Server started on port 3000') //indicate server started on port.
+app.listen(port, () => {
+    console.log('Server started on port ' + port) //indicate server started on port.
 });

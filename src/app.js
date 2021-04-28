@@ -35,7 +35,7 @@ app.get('', (req, res) => {
 //route for about.hbs
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About Me',
+        title: 'About',
         name: 'Michael Dehaney'
     });
 });

@@ -1,4 +1,4 @@
-console.log('Client-side javascript is loaded!')
+
 
 //selects the elements to create form and button interaction
 //to render data on browser display
